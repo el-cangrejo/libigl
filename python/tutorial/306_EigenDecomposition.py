@@ -57,7 +57,7 @@ def key_down(viewer, key, mod):
         # Rescale eigen vectors for visualization
         Z = bbd * 0.5 * U.col(c)
         C = igl.eigen.MatrixXd()
-        igl.parula(U.col(c), False, C)
+        igl.parula(U.col(c), True, C)
         c = (c + 1) % U.cols()
 
         if twod:
